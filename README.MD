@@ -20,7 +20,7 @@ PlayStation 2 Background-like Live Wallpaper, Compatible with Android and Wallpa
 - 1.28 GHz x86 CPU ( 2.0GHz Recommended )
 - OpenGL 3.3
 - 1MB Free Storage Space
-- Wallpaper Engine that supports Unity app embedding
+- Wallpaper Engine (or any that supports Unity app embedding)
 
 ## Building
 ### Pre-requisites
@@ -36,7 +36,7 @@ PlayStation 2 Background-like Live Wallpaper, Compatible with Android and Wallpa
 ### Steps
 #### Desktop
 - Clone the repo
-- Do CMake Configure by running CMake on the directory
+- Configure the project by running CMake with the project root as argument
 - Run the build tool (GNU Makefile, MSBuild)
 
 #### Android (Android Studio)
@@ -44,6 +44,13 @@ PlayStation 2 Background-like Live Wallpaper, Compatible with Android and Wallpa
 - Build
 
 ## Known Problems
+#### I cannot launch this application on Android
+The built Android app only contains one Live Wallpaper and one Testing activity, The only way to open
+the Live Wallpaper is to actually go to your device `Settings > Display > Wallpaper > Live Wallpapers`.
+
+The test activity only launchable via Android Studio and some application that reveals every
+activity in an application like [LonelyCatGames' X-plore](https://play.google.com/store/apps/details?id=com.lonelycatgames.Xplore&hl=in&gl=US)
+
 #### This is not 1:1 to PS2's Background!
 First and foremost, Think it as a mediocre recreation / demo. I do not plan to make it 1:1 to PS2's
 original background, I just want to make something similar but simpler.
@@ -53,7 +60,7 @@ I have some problem with math, This is actually something to do with the refract
 calculation in the shader. if someone can help with it, then please 🙂.
 
 #### The crystal have glitchy refractions.
-It's appears due to a race condition, where a texture data is written and read a t nearly the same
+It's appears due to a race condition, where a texture data is written and read at nearly the same
 time, in this case is to create the refraction effect. On desktop, it should be fine
 since I've put texture memory barrier on almost every draw call to minimize this effect, but on Android,
 the effect will be hugely varies by what I've said before since OpenGL ES didn't have the texture memory
