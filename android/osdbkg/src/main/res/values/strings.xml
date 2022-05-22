@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">OSDBKG</string>
-    <string name="wallpaper_name">PS2OSD Live Wallpaper</string>
+    <string name="wallpaper_name">OSDBKG Live Wallpaper</string>
     <string name="wallpaper_desc">Live Wallpaper mimicking PS2 System Configuration Background</string>
 </resources>
