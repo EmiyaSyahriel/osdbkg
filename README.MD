@@ -1,3 +1,4 @@
+English | [Bahasa Indonesia](README.ID.MD)
 # OSDBKG
 PlayStation 2 Background-like Live Wallpaper, Compatible with Android and Wallpaper Engine.
 
